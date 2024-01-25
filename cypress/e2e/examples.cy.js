@@ -15,7 +15,7 @@ describe('Various examples', () => {
         cy.getDataTest('nav-examples').click();
         cy.location('pathname').should('equal', '/examples');
     })
-    it.only('intercepts', () => {
+    it('intercepts', () => {
         cy.intercept('POST', 'http://localhost:3000/examples', {
             fixture: 'example.json'
         })
